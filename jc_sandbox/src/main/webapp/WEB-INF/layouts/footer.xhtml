@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui" >
+
+    <!-- Get current year for Copyright -->
+    <script type="text/javascript">
+        var currentYear = (new Date).getFullYear();
+        $(document).ready(function() {
+            $("#year").text(currentYear);
+        });
+    </script>
+
+    <div class="ft">
+        <div class="footerSeparator" id="footerDiv"></div>
+        <div class="left">
+            <h:outputLink title="mailto:soc@solutionary.com" value="mailto:soc@solutionary.com" styleClass="nowrap">
+                <h:outputText value="#{labels.socOmaha}" />
+            </h:outputLink>
+            :&#160;
+            <h:outputText value="#{labels.socOmahaPhone}" />
+            | 
+            <h:outputLink title="mailto:soc-pit@solutionary.com" value="mailto:soc-pit@solutionary.com" styleClass="nowrap">
+                <h:outputText value="#{labels.socPittsburgh}" />
+            </h:outputLink>
+            :&#160;
+            <h:outputText value="#{labels.socPittsburghPhone}" />
+        </div> 
+        <div class="right" style="padding-right: 10px;">
+            Copyright&reg;&nbsp;<span id="year"></span> <a href="http://www.solutionary.com" target="_blank">Solutionary, Inc.</a>
+        </div>
+    </div>
+
+</ui:composition>

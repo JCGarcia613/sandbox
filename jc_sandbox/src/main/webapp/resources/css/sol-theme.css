@@ -1,0 +1,496 @@
+/* ============================
+    SOL-THEME.CSS
+
+    1. GLOBAL STYLES
+        A. POSITIONING
+        B. TYPOGRAPHY
+        C. OVERRIDES
+
+    2. PORTAL TEMPLATE STYLES
+        A. HEADER
+        B. TOP RIGHT NAV
+        C. PAGE CONTENT
+        D. FOOTER
+
+    3. PAGE SPECIFIC STYLES
+    
+    Version: 4.14.3-1 
+    Release: 01.17.15
+    KGenovese
+============================ */
+
+/* ----------------------------
+    GLOBAL STYLES
+---------------------------- */
+/*
+ * POSITIONING 
+ */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.left {
+    float: left;
+    position: relative;
+}
+
+.right {
+    float: right;
+    position: relative;
+}
+
+.top {
+    v-align: top !important;
+    vertical-align: top !important;
+}
+
+.center {
+    text-align: center;
+}
+
+.fullWidth {
+    width: 100% !important;
+}
+
+.sideSearchPanel {
+    width: 325px;
+}
+
+.rightCol {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+}
+
+.topMarginSmall {
+    margin: 5px 0 0 0;
+}
+
+.bottomMarginSmall {
+    margin-bottom: 5px !important;
+}
+
+/*
+ * TYPOGRAPHY 
+ */
+.ui-messages,
+.ui-outputlabel,
+.ui-state-default,
+.ui-widget-content,
+.ui-widget,
+.ui-widget .ui-widget {
+    font-size: 11px !important;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.nowrap {
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+img {
+    border-width: 0px;
+}
+
+.roundCorners {
+    border-radius: 1em;
+    -moz-border-radius: 1em;
+}
+
+.solAccordion .ui-accordion-content {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #DDDDDD;  
+}
+
+.ui-selectmanycheckbox label,
+.ui-selectoneradio label {
+    margin-top: auto;
+}
+
+.ui-chkbox,
+.ui-chkbox div,
+.ui-radiobutton,
+.ui-radiobutton div {
+    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 0;    
+}
+
+.ui-treenode-label {
+    vertical-align: middle !important;
+    margin-top: 0 !important; 
+    margin-bottom: 0 !important; 
+}
+
+
+/*
+ * OVERRIDES 
+ */
+.ui-state-normal {
+    background-color: #009911;
+    border: 1px solid #005500;
+    color: #FFFFFF;
+}
+.mainMenu .ui-menu-child {
+    white-space: nowrap !important;
+    width: 170px !important; 
+}
+.ui-menuitem-text {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: normal !important;
+    word-break: keep-all;
+    white-space: nowrap !important;
+}
+
+/* PF 5.0 Issue 6819 fix (http://code.google.com/p/primefaces/issues/detail?id=6819) */
+.ui-datatable table {
+    table-layout: auto !important;
+}
+
+.ui-datatable td, .ui-datatable th {
+    white-space: normal !important;
+}
+
+.ui-datatable-even {
+    background: none repeat scroll 0 0 #FFF;
+}
+
+.ui-datatable-odd {
+    background: none repeat scroll 0 0 #F2F5F9;
+}
+
+/* Replacing checkmark icon for disk icon */
+.ui-datatable .ui-row-editor .ui-icon-check {
+    background-image: url("/javax.faces.resource/images/ui-icons_2e83ff_256x240.png.jsf?ln=primefaces-cupertino");
+    background-position: -96px -112px;
+}
+
+/* TODO - how should we handle this?
+.ui-panelgrid td {
+    padding-top: 0 !important;
+    padding-bottom: 4px !important;
+    padding-left: 0 !important;
+    padding-right: 2px !important;
+    background-color: #F2F5F7 !important;
+}
+*/
+
+.nooutline td, .nooutline th, .nooutline tr {
+    border-width: 0px !important;
+}
+
+.layoutStyle .ui-layout-unit-header {
+    background: #FFF;
+}
+
+.layoutStyle .ui-layout-unit-content {
+    background: #FFF;
+}
+
+.overflowAuto {
+    overflow: auto !important;
+}
+
+.disableScroll .ui-dialog-content {
+    overflow: hidden !important;
+}
+
+li.ui-picklist-item {
+    white-space: nowrap;
+}
+
+.ui-picklist {
+    max-height: 300px !important;
+}
+
+ul.ui-picklist-list {
+    width: 100% !important;
+}
+
+.ui-tabmenu {
+    border: 0;
+}
+
+.ui-tabmenu .ui-tabmenu-nav {
+    padding-left: 5px;
+}
+
+.ui-wizard-step-title {
+    font-size: 11px !important;
+}
+
+/* ----------------------------
+    PORTAL TEMPLATE STYLES (see standard.xhtml)
+---------------------------- */
+/*
+ * HEADER
+ */
+#wrap {
+    border-top: 4px solid #004C98;
+    padding: 8px;
+    background-color: #FFF;
+}
+
+#header .wrap {
+    position: relative;
+    height: 73px;
+}
+
+#header h1 {
+    position: absolute;
+    left: 200px;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    color: #004080;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+/*
+ * TOP RIGHT NAV
+ */
+.quicklinks {
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #636464;
+    font-size: 11px;
+}
+
+.quicklinks a {
+    color: #636464;  
+    text-decoration: none;
+}
+
+.quicklinks a:hover {
+    text-decoration: underline;
+}
+
+.quicklink {
+    padding: 2px 0 2px 20px;
+    background: no-repeat;
+    background-position: left;
+}
+
+.sep {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+/*
+ * PAGE CONTENT
+ */
+.pageContent {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.pageTitle {
+    color: #999;
+    font-size: 12pt;
+    font-weight: bold;
+    width: 100%;
+    margin-left: 5px;
+}
+
+/*
+ * FOOTER
+ */
+.ft {
+    background-position:0 0;
+    bottom:0px;
+    border-top:8px solid #4D9901;
+    color:#999;
+    font-size:8pt; 
+    font-weight: normal;
+    line-height: 12pt;
+    padding-top:0px;
+}
+
+.ft a {
+    color: #999;
+    font-weight: bold;
+    padding-right: 3px;
+    height: 30px;
+    position: relative;
+}
+
+.footerSeparator {
+    background-color: #D7D7D7;
+    border-radius: 0 0 8px 8px;
+    border-top: 0 solid #D7D7D7;
+    height: 4pt;
+    -moz-border-radius: 0 0 8px 8px;
+    -webkit-border-radius: 0 0 8px 8px;
+}
+
+/* ----------------------------
+    PAGE SPECIFIC STYLES
+---------------------------- */
+.dataListNoBorder .ui-widget-content {
+    border: 0px;
+}
+
+/* TODO - no style */
+.errorPanel {
+}
+
+.errorText {
+    background-color: rgb(255,207,207);
+    background-position: 17px 50%;
+    background-repeat: no-repeat;
+    border: 1px groove rgb(201, 194, 155);
+    font-size: 0.75em;
+    padding: 7px 7px 7px 10px;
+}
+
+.exampleText {
+    background-color: rgb(173, 216, 230);
+    background-position: 17px 50%;
+    background-repeat: no-repeat;
+    border: 1px groove rgb(176, 194, 155);
+    font-size: 0.9em;
+    padding: 7px 17px 27px 10px;
+}
+
+.exampleText span {
+    font-size: 1.2em;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+/* TODO - needed? */
+form {
+    margin: 0;
+    padding: 0;
+}
+
+.helplink {
+    padding: 2px 20px 2px 0;
+    background: no-repeat;
+    background-position: right;
+}
+
+/* TODO - no style */
+.helpPanel {
+}
+
+.helpText {
+    background-color: rgb(224, 242, 203); 
+    background-position: 17px 50%;
+    background-repeat: no-repeat;
+    border: 1px groove rgb(176, 194, 155); 
+    font-size: 0.9em;
+    padding: 7px 7px 7px 10px; 
+}
+
+#layout-grid {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#layout-grid > tbody > tr > td {
+    padding: 0;
+}
+
+#layout-grid .column1 {
+    vertical-align: top;
+}
+
+#layout-grid .sidebar {
+    padding-right: 8px;
+}
+
+#layout-grid .sidebar-content {
+    width: 250px;
+}
+
+#layout-grid .column2 {
+    vertical-align: top;
+    width: 100%;
+}
+
+#main {
+    margin: 8px 0;
+}
+
+/* -------------------------------
+    OLD STYLES STILL REFERENCED
+-------------------------------- */
+.sol-back {
+    background-image: url('/images/resultset_previous.png') !important;
+    background-position: right center;
+}
+.sol-button {
+     margin-right: 5px !important;
+}
+.sol-cancel {
+    background-image: url('/images/cancel.png') !important;
+    background-position: right center;
+}
+
+.sol-funnel {
+    background-image: url('/images/funnel.png') !important;
+    background-position: right center;
+}
+
+.sol-lightgreen {
+    background-color: #F0FFF0 !important;
+    filter: alpha(opacity=100) !important;
+}
+
+.sol-lightred {
+    background-color: #F9E8E9 !important;
+    filter: alpha(opacity=100) !important;
+}
+
+.sol-max-width {
+    width: 99% !important;
+}
+
+.sol-red {
+    color: #FF0000 !important;
+}
+
+.sol-save {
+    background-image: url('/images/save_16.gif') !important;
+    background-position: right center;
+}
+
+.sol-search {
+    background-image: url('/images/view.gif') !important;
+    background-position: right center;
+}
+/*
+.toolTipTable {
+    margin: -10px -10px;
+}
+
+.toolTipTable span.sol-info, .toolTipTableChk span.sol-info {
+    margin-left: -20px;
+}
+
+.toolTipTableChk {
+    margin: -5px -5px;
+}
+*/
+/* TODO - no style */
+.warningPanel {
+}
+
+.warningText {
+    background-color: rgb(250,250,210);
+    background-position: 17px 50%;
+    background-repeat: no-repeat;
+    border: 1px groove rgb(201, 194, 155);
+    font-size: 0.9em;
+    padding: 7px 7px 7px 10px;
+}

@@ -1,0 +1,27 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:composite="http://java.sun.com/jsf/composite"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pe="http://primefaces.org/ui/extensions"
+    xmlns:cc="http://java.sun.com/jsf/composite">
+
+    <cc:interface>
+        <cc:attribute name="text" />
+        <cc:attribute name="resourceKey" />
+    </cc:interface>
+
+    <cc:implementation>
+        <div id="#{cc.clientId}">
+            <p:commandLink global="false" >
+                <h:outputText styleClass="ui-icon ui-icon-info" />
+            </p:commandLink>
+            <pe:tooltip for="@previous" value="#{not empty cc.attrs.text ? cc.attrs.text : tooltips[cc.attrs.resourceKey]}" showEvent="focus" hideEvent="blur"
+                showEffect="fadeIn" hideEffect="fadeOut" showDelay="0" myPosition="left center" atPosition="right center">
+                <composite:insertChildren />
+            </pe:tooltip>
+        </div>
+    </cc:implementation>
+
+</ui:composition>

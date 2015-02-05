@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui" >
+
+    <!-- This function fixes an issue that prevented PrimeFaces submenus from displaying properly when the browser was resized to be too small.
+         It was obtained from http://stackoverflow.com/questions/21878524/primefaces-menubar-scroll-blocks-submenu -->
+    <script>
+        PrimeFaces.widget.Menubar.prototype.activate = function(b) {
+            this.highlight(b);
+            var a = b.children("ul.ui-menu-child");
+            if (a.length == 1) {
+                a.css('display', 'table');
+                this.showSubmenu(b, a);
+            } else {
+                b.css('display', 'table');
+            }
+        }
+    </script>
+
+    <h:form>
+        <div class="mainMenu nowrap">
+            <p:menubar>
+                <f:facet name="options">
+                    <h:panelGroup>
+                        <p:outputLabel value="* #{labels['eventSearch']}:" styleClass="bold" />&#160;
+                        <p:inputText id="globalEventId" required="true" style="width:168px;" />
+                        <p:commandButton icon="ui-icon-search" style="margin-left:2px;" />
+                    </h:panelGroup>
+                </f:facet>
+                <p:submenu label="Dashboard">
+                    <p:menuitem value="User Selected" url="#" />
+                </p:submenu>
+                <p:submenu label="Services">
+                    <p:submenu label="Events">
+                        <p:menuitem value="Event Manager" url="#" />
+                        <p:menuitem value="Open Events" url="#" />
+                        <p:menuitem value="Work Queue" url="#" />
+                        <p:menuitem value="Limited Functionality" url="#" />
+                    </p:submenu>
+                    <p:menuitem value="Monitoring" url="#" />
+                    <p:submenu label="Policy Management">
+                        <p:menuitem value="Reference List Management" url="#" />
+                        <p:menuitem value="Visibility Polity" url="#" />
+                    </p:submenu>
+                    <p:menuitem value="Device Status" url="#" />
+                    <p:submenu label="Vulnerability Scanning">
+                        <p:menuitem value="Search Vulnerabilitites" url="#" />
+                        <p:menuitem value="Vuln Scan Profile Setup" url="#" />
+                        <p:menuitem value="Scan Configuration Manager" url="#" />
+                        <p:menuitem value="Scheduled Scans" url="#" />
+                        <p:menuitem value="Scan History" url="#" />
+                        <p:menuitem value="Running Scans" url="#" />
+                        <p:menuitem value="Scan Schedules" url="#" />
+                        <p:menuitem value="Scan Status" url="#" />
+                        <p:menuitem value="Validated PCI Report JSF" url="#" />
+                        <p:menuitem value="Vuln Scanner Setup" url="#" />
+                        <p:menuitem value="Scanner Setup" url="#" />
+                        <p:menuitem value="Qualys Scan Loader" url="#" />
+                    </p:submenu>
+                    <p:menuitem value="Raw Log Search" url="#" />
+                </p:submenu>
+                <p:submenu label="Tickets">
+                    <p:menuitem value="Auto Assign Tickets" url="#" />
+                    <p:menuitem value="Disposition Codes" url="#" />
+                    <p:menuitem value="My Tickets" url="#" />
+                    <p:menuitem value="Ticket Assign Rules" url="#" />
+                    <p:menuitem value="Ticket Due Date Parameters" url="#" />
+                    <p:menuitem value="Ticket Manager" url="#" />
+                    <p:menuitem value="Ticket Sources" url="#" />
+                    <p:menuitem value="Upload Sources" url="#" />
+                    <p:menuitem value="MDT Work Queue" url="#" />
+                </p:submenu>
+                <p:submenu label="Reports">
+                    <p:menuitem value="Document Management" url="#" />
+                    <p:submenu label="Reports">
+                        <p:menuitem value="Manage Client Reports" url="#" />
+                        <p:menuitem value="Processed Reports" url="#" />
+                        <p:menuitem value="Report Admin" url="#" />
+                        <p:menuitem value="Portlet Admin" url="#" />
+                        <p:menuitem value="Report Generator" url="#" />
+                        <p:menuitem value="Scheduler" url="#" />
+                        <p:menuitem value="Security Trends" url="#" />
+                        <p:menuitem value="Report Status" url="#" />
+                        <p:menuitem value="Reschedule Reports" url="#" />
+                    </p:submenu>
+                </p:submenu>
+                <p:submenu label="SOC">
+                    <p:submenu label="DPS">
+                        <p:menuitem value="DPS Task Manager" url="#" />
+                        <p:menuitem value="DPS Task Config" url="#" />
+                    </p:submenu>
+                    <p:submenu label="AG Configuration">
+                        <p:menuitem value="AG Boxes" url="#" />
+                        <p:menuitem value="AG Checklists" url="#" />
+                        <p:menuitem value="AG Controls" url="#" />
+                        <p:menuitem value="AG Processes" url="#" />
+                        <p:menuitem value="AG Rules" url="#" />
+                        <p:menuitem value="Manage Threshold" url="#" />
+                        <p:menuitem value="Client Class Services" url="#" />
+                        <p:menuitem value="Manage Lava Configuration" url="#" />
+                    </p:submenu>
+                    <p:menuitem value="AG Toolkit" url="#" />
+                    <p:menuitem value="Checklist Template Maintenance" url="#" />
+                    <p:submenu label="Client Configuration">
+                        <p:menuitem value="Client Checklists" url="#" />
+                        <p:menuitem value="Client Setup" url="#" />
+                        <p:menuitem value="Client Software" url="#" />
+                        <p:menuitem value="Escalation Procedures" url="#" />
+                        <p:menuitem value="SOWs" url="#" />
+                        <p:menuitem value="Client Maintenance Notes" url="#" />
+                        <p:menuitem value="View Client Range" url="#" />
+                        <p:menuitem value="View Current Baseline" url="#" />
+                        <p:menuitem value="View Notify Information" url="#" />
+                        <p:menuitem value="View Open Events" url="#" />
+                    </p:submenu>
+                    <p:menuitem value="Manage Service Delivery Team" url="#" />
+                    <p:menuitem value="Host File Creation" url="#" />
+                    <p:menuitem value="Load File" url="#" />
+                    <p:menuitem value="Manage Bulletin Queue" url="#" />
+                    <p:menuitem value="Manage Email Templates" url="#" />
+                    <p:menuitem value="Manage Event Types" url="#" />
+                    <p:menuitem value="Manage Notify Rules" url="#" />
+                    <p:menuitem value="Manage Notify User" url="#" />
+                    <p:menuitem value="Note Maintenance" url="#" />
+                    <p:menuitem value="Notify User Group" url="#" />
+                    <p:menuitem value="PCI DSS Search" url="#" />
+                    <p:menuitem value="Scan" url="#" />
+                    <p:menuitem value="SOC Automation" url="#" />
+                </p:submenu>
+                <p:submenu label="Configuration">
+                    <p:submenu label="Assets">
+                        <p:menuitem value="Assets" url="#" />
+                        <p:menuitem value="Asset Templates" url="#" />
+                        <p:menuitem value="Tag Values" url="#" />
+                        <p:menuitem value="Tag Types" url="#" />
+                        <p:menuitem value="Manage Assets" url="#" />
+                        <p:menuitem value="Client Scan Range" url="#" />
+                        <p:menuitem value="Upload Assets" url="#" />
+                    </p:submenu>
+                    <p:submenu label="SCEs">
+                        <p:menuitem value="Category Maintenance" url="#" />
+                        <p:menuitem value="CVE Search" url="#" />
+                        <p:menuitem value="SCE List" url="#" />
+                        <p:menuitem value="SCE Groups" url="#" />
+                        <p:menuitem value="Signatures" url="#" />
+                        <p:menuitem value="Software Maintenance" url="#" />
+                    </p:submenu>
+                    <p:submenu label="Administration">
+                        <p:menuitem value="User Profile" url="#" />
+                        <p:menuitem value="Users" url="#" />
+                        <p:menuitem value="Groups" url="#" />
+                        <p:menuitem value="Audit Events" url="#" />
+                    </p:submenu>
+                    <p:menuitem value="Notification Banner" url="#" />
+                    <p:menuitem value="Pricebook" url="#" />
+                    <p:menuitem value="Supported Devices" url="#" />
+                    <p:submenu label="Medical Audit">
+                        <p:menuitem value="Action Types" url="#" />
+                        <p:menuitem value="App Actions" url="#" />
+                        <p:menuitem value="Departments" url="#" />
+                        <p:menuitem value="App Tokens" url="#" />
+                        <p:menuitem value="App Token Values" url="#" />
+                        <p:menuitem value="External Departments" url="#" />
+                        <p:menuitem value="Patient VIP Status" url="#" />
+                        <p:menuitem value="Source App - Systems" url="#" />
+                    </p:submenu>
+                </p:submenu>
+            </p:menubar>
+        </div>
+    </h:form>
+
+</ui:composition>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:solutils="http://java.sun.com/jsf/composite/components/utils"
+    template="/WEB-INF/layouts/standard.xhtml">
+
+    <ui:define name="title">
+        <h:outputText value="#{labels['dashboardPrototype']}" />
+    </ui:define>
+
+    <ui:define name="content">
+        <h:panelGrid styleClass="top fullWidth" columnClasses="rightCol">
+            <p:panel styleClass="fullWidth">
+                <h:form>
+                    <p:toolbar id="actionBtns" style="padding:5px;">
+                        <f:facet name="left">
+                            <p:commandButton id="helloPrimeFaces_btn" value="#{labels['helloPrimefaces']}" icon="ui-icon-newwin" onclick="PF('myDialog').show();" />
+                        </f:facet>
+                    </p:toolbar>
+                </h:form>
+            </p:panel>
+        </h:panelGrid>
+    </ui:define>
+
+    <ui:define name="pageDialogs">
+        <h:form id="someForm">
+            <p:dialog widgetVar="myDialog" header="Dialog Example" dynamic="true" modal="true" position="center" closeOnEscape="true" maximizable="true" height="500" width="725">
+                <p:outputPanel id="dialogContent">
+                    <ui:include src="/views/TestDialog.xhtml" />
+                </p:outputPanel>
+                <f:facet name="footer">
+                    <p:commandButton value="Save" icon="ui-icon-disk" oncomplete="PF('myDialog').hide();" />
+                    <p:commandButton value="Cancel" immediate="true" icon="ui-icon-cancel" oncomplete="PF('myDialog').hide();" />
+                </f:facet>
+            </p:dialog>
+        </h:form>
+    </ui:define>
+</ui:composition>

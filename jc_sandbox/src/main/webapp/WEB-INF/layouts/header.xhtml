@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui" >
+
+    <p:graphicImage value="../resources/images/Solutionary_LOGO_new.jpg" />
+    <h1 class="title"><h:outputText value="#{labels.activeGuard}" />&#174;&#160;<h:outputText value="#{labels.securityAndCompliancePortal}" /></h1>
+    <span class="quicklinks">
+        <h:outputLink title="#{labels.releaseNotes}" target="_blank">
+            <h:outputText value="#{labels.version}"/>: <h:outputText value="portal_version" />
+        </h:outputLink>
+        <span class="sep"> | </span>
+        <h:outputLink title="#{labels.help}">
+            <h:outputText value="#{labels.help}" />
+        </h:outputLink>
+        <span class="sep"> | </span>
+        <h:outputLink title="" value="javascript:void(0)" id="showDisplayPreferencesBtn">
+            <h:outputText value="#{labels.client}" />:
+            <h:outputText id="displayPreferencesClientName" value="1000 -- Solutionary,Inc." styleClass="nowrap" />
+        </h:outputLink>
+        <span class="sep"> | </span>
+        <h:outputLink title="#{labels.user}: portal_user" value="javascript:void(0)" id="showPortalUsrDialogBtn">
+            <h:outputText value="portal_user" />
+        </h:outputLink>&#160;
+        <span class="sep"> | </span>
+        <h:outputLink title="#{labels.loginHistory}">
+            <h:outputText value="#{labels.loginHistory}" />
+        </h:outputLink>
+        <span class="sep"> | </span>
+        <h:outputLink id="logoutLink" title="#{labels.logout}">
+            <h:outputText value="#{labels.logout}" />
+        </h:outputLink>
+        &#160;
+    </span>
+
+</ui:composition>
