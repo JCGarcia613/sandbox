@@ -6,34 +6,14 @@
     xmlns:ui="http://java.sun.com/jsf/facelets"
     xmlns:p="http://primefaces.org/ui" >
 
-    <p:graphicImage value="../resources/images/Solutionary_LOGO_new.jpg" />
-    <h1 class="title"><h:outputText value="#{labels.activeGuard}" />&#174;&#160;<h:outputText value="#{labels.securityAndCompliancePortal}" /></h1>
+    <h1 class="title"><h:outputText value="EduTube" /></h1>
     <span class="quicklinks">
         <h:outputLink title="#{labels.releaseNotes}" target="_blank">
-            <h:outputText value="#{labels.version}"/>: <h:outputText value="portal_version" />
+            <h:outputText value="#{labels.version}"/>: <h:outputText value="prototype" />
         </h:outputLink>
         <span class="sep"> | </span>
         <h:outputLink title="#{labels.help}">
             <h:outputText value="#{labels.help}" />
         </h:outputLink>
-        <span class="sep"> | </span>
-        <h:outputLink title="" value="javascript:void(0)" id="showDisplayPreferencesBtn">
-            <h:outputText value="#{labels.client}" />:
-            <h:outputText id="displayPreferencesClientName" value="1000 -- Solutionary,Inc." styleClass="nowrap" />
-        </h:outputLink>
-        <span class="sep"> | </span>
-        <h:outputLink title="#{labels.user}: portal_user" value="javascript:void(0)" id="showPortalUsrDialogBtn">
-            <h:outputText value="portal_user" />
-        </h:outputLink>&#160;
-        <span class="sep"> | </span>
-        <h:outputLink title="#{labels.loginHistory}">
-            <h:outputText value="#{labels.loginHistory}" />
-        </h:outputLink>
-        <span class="sep"> | </span>
-        <h:outputLink id="logoutLink" title="#{labels.logout}">
-            <h:outputText value="#{labels.logout}" />
-        </h:outputLink>
-        &#160;
     </span>
-
 </ui:composition>

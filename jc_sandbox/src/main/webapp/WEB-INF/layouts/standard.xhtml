@@ -12,16 +12,12 @@
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
             <meta http-equiv="Pragma" content="no-cache" />
             <meta http-equiv="Cache-Control" content="no-store,no-Cache" />
-            <link rel="shortcut icon" href="../resources/images/favicon.ico" />
             <f:facet name="last">
                 <h:outputScript library="js" name="common.js" />
                 <h:outputStylesheet library="css" name="sol-theme.css" target="head" />
                 <h:outputStylesheet library="css" name="prototype.css" target="head" />
                 <h:outputStylesheet library="css" name="prototype-theme.css" target="head" />
             </f:facet>
-            <title>
-                <ui:insert name="title" />
-            </title>
         </h:head>
 
         <h:body>
@@ -30,7 +26,6 @@
                     <div id="wrap">
                         <div id="header">
                             <div class="wrap">
-                                <h:graphicImage id="ux_prototype_ribbon" value="../resources/images/ux_prototype.png"/>
                                 <ui:include src="header.xhtml" />
                             </div>
                         </div>
@@ -51,7 +46,7 @@
                                 <ui:insert name="content" />
                             </div>
                         </div>
-                        <ui:include src="footer.xhtml" />
+                        <!-- <ui:include src="footer.xhtml" /> -->
                     </div>
                 </p:layoutUnit>
             </p:layout>
