@@ -8,7 +8,7 @@
     template="/WEB-INF/layouts/standard.xhtml">
 
 	
-       <link href="css/bootstrap.min.css" rel="stylesheet"/> 
+       <!-- <link href="css/bootstrap.min.css" rel="stylesheet"/> --> 
        <!-- <link href="css/starter-template.css" rel="stylesheet"> -->
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -34,29 +34,7 @@
 	<!-- /.container -->
 
 	<ui:define name="content">		
-        <div id="navback" style="background-color:#fff;width:100%;height:50px;margin-top:-50px"></div>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="opacity:.95">
-        <div class="container">
-            <!-- <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar" style="background-color:#EB9D00"></span>
-                    <span class="icon-bar" style="background-color:#EB9D00"></span>
-                    <span class="icon-bar" style="background-color:#EB9D00"></span>
-                </button>
-                <a class="navbar-brand" href="index.html" style="color:#EB9D00;margin-top:-5px"><div style="padding-top:4.2px;float:right">educationTUBE</div></a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html" style="color:#EB9D00">Home</a></li>
-                    <li><a href="store.html" style="color:#EB9D00">Videos</a></li>
-                    <li><a href="products.html" style="color:#EB9D00">Learn More</a></li>
-                    <li><a href="about.html" style="color:#EB9D00">Help</a></li>
-                    <li><a href="contact.html" style="color:#EB9D00">About</a></li>
-                </ul>
-            </div>/.nav-collapse -->
-        </div>
-        </nav>
+        
         
         
 
@@ -79,8 +57,15 @@
             
         </div>
 		
-		<button id="evts_button">select node with id 1</button> <em>either click the button or a node in the tree</em>
-		<div id="evts" class="demo"></div>
+		<p:outputLabel value="Menu"/>
+        <p:inputText id="manualTimestamp" value="#{utilitiesView.clientId}"/>
+        <p:tree value="#{youtubeTreeView.root}" var="node" dynamic="true" onNodeClick="player.seek(#{youtubeTreeView.timestamp},true)">
+            <p:treeNode>
+                <h:outputText value="#{node}"/>
+            </p:treeNode>
+        </p:tree>
+        <button id="evts_button">select node with id 1</button> <em>either click the button or a node in the tree</em>
+        <div id="evts" class="demo"></div>
 		<script>
 			$('#evts_button').on("click", function () {
 		var instance = $('#evts').jstree(true); 

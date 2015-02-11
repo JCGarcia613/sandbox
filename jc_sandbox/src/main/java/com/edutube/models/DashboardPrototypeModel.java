@@ -1,4 +1,4 @@
-package com.solutionary.models;
+package com.edutube.models;
 
 public class DashboardPrototypeModel {
     String field;

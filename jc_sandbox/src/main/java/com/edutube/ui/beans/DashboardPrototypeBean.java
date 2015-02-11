@@ -1,4 +1,4 @@
-package com.solutionary.ui.beans;
+package com.edutube.ui.beans;
 
 import java.io.Serializable;
 //import java.util.ArrayList;
