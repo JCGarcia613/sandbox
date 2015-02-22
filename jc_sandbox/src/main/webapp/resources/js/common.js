@@ -1,4 +1,4 @@
-Solutionary = {
+Edutube = {
     utils : {
         returnValue : function(formId, elemId, value) {
             var element = window.opener.document.forms[formId].elements[elemId];
@@ -10,7 +10,7 @@ Solutionary = {
             window.close();
         },
         scrollToPageBottom : function() {
-            Solutionary.utils.scrollTo('footerDiv');
+            Edutube.utils.scrollTo('footerDiv');
         },
         scrollTo : function(elementId) {
             document.getElementById(elementId).scrollIntoView(false);

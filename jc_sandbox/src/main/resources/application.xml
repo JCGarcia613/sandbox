@@ -17,7 +17,7 @@
            http://www.springframework.org/schema/security/spring-security-3.0.3.xsd">
 
     <context:property-placeholder location="classpath:application.properties" />
-    <context:component-scan base-package="com.solutionary" />
+    <context:component-scan base-package="com.edutube" />
 
     <tx:annotation-driven transaction-manager="txManager" />
 

@@ -5,7 +5,7 @@
     version="2.0">
 
     <persistence-unit name="prototype-pu" transaction-type="RESOURCE_LOCAL">
-        <!--<class>com.solutionary.models.Client</class>-->
+        <!--<class>com.edutube.models.Client</class>-->
     </persistence-unit>
 
 </persistence>
